@@ -1,0 +1,6 @@
+*.min.css
+*.min.css.map
+connection.php
+main.js.LICENSE.txt
+main.js.map
+error_log
