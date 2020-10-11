@@ -1,0 +1,43 @@
+.footer-email
+  {
+      @include email-href(\.\./\.\./images/email\.png);
+  }
+ 
+  /*回頂端圖標*/
+.gotop {
+    display: block;
+    width: 28px;
+    height: 28px;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    z-index: 10;
+    color: #6f6a66;
+}
+
+.gotop::before {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include triangle(0,7px,9px,7px,#577797);
+}
+
+.gotop::after {
+    content: 'top';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: .05em;
+    line-height: 13px;
+}
+ /*回頂端圖標end*/ 

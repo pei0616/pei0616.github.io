@@ -1,0 +1,47 @@
+.navbar-color {
+    background-color: #e6e6e6;
+  }
+
+.carousel-title{
+    font-weight: bold;
+    font-size: 1.3rem !important;
+    @include itTablets{
+        &{
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+    }
+}
+
+.t-center {
+    margin: 30px auto 0;
+    text-align: center;
+  }
+
+.no-p {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pt-2em {
+    padding-top: 2em;
+}
+
+.pt-4em{
+    padding-top:4em;
+}
+
+.no-m {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.mr-10px{
+    margin-right:10px;
+}
+
+.sm-no-mt{
+    @include itTablets{
+        margin-top: 0 !important;
+    }
+}

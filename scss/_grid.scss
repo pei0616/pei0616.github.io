@@ -1,0 +1,52 @@
+
+.container
+{
+    max-width: 960px;//本體+內距
+    margin:0 auto;
+    padding-left: $gutter-w/2;
+    padding-right: $gutter-w/2;
+}
+//row 和container的max-w 一樣大
+.row
+{
+    display:flex;
+    margin-left: -($gutter-w/2);
+    margin-right: -($gutter-w/2);
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+%col{
+    flex:0 0 100%;//flex設寬更精準
+    max-width:100%;// width 作為輔助，flex 屬性為主
+    min-height:1px;
+    padding-left: $gutter-w/2;
+    padding-right: $gutter-w/2;
+}
+
+@for $i from 1 to $grid_num+1 {
+    .col-#{$i} {
+        @extend %col;
+    }
+}
+
+.content{
+    //內容字體水平、垂直置中
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:200px;
+}
+
+
+//電腦版
+@include tablets{
+    @for $i from 1 to $grid_num+1{
+        .col-#{$i}{
+            flex:0 0 (($i/$grid_num)*100%);
+            max-width:($i/$grid_num)*100%;
+        }
+    }
+}
+    
+    
