@@ -3,6 +3,10 @@
       @include email-href(\.\./\.\./images/email\.png);
   }
  
+.footer-share{
+    @include replace-text(\.\./\.\./images/facebook\.png);
+}
+
   /*回頂端圖標*/
 .gotop {
     display: block;
@@ -15,6 +19,9 @@
     color: #6f6a66;
 }
 
+.btn{
+    padding: 1rem 1rem;
+}
 .gotop::before {
     content: '';
     width: 0;
